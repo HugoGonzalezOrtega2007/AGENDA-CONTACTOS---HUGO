@@ -4,24 +4,38 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Seleccione un menú: ");
+        boolean salir = false;
+        while (!salir) {
 
-        System.out.println("- Añadir contacto");
-        System.out.println("- Mostrar contactos");
-        System.out.println("- Buscar contacto");
-        System.out.println("- Salir");
+            System.out.println("\n Seleccione un menú:");
 
-        String opcion = scanner.nextLine();
-        if (opcion.equals("Añadir contacto")) {
-            System.out.println("Has escogido: " + opcion);
-        } else if (opcion.equals("Mostrar contactos")) {
-            System.out.println("Has escogido: " + opcion);
-        } else if (opcion.equals("Buscar contacto")) {
-            System.out.println("Has escogido: " + opcion);
-        } else {
-            System.out.println("Has escogido: " + opcion);
+            System.out.println("- Añadir contacto");
+            System.out.println("- Mostrar contactos");
+            System.out.println("- Buscar contacto");
+            System.out.println("- Salir");
+
+            System.out.print("Opción: ");
+
+            String opcion = scanner.nextLine(); // leer y limpiar entrada
+
+            if (opcion.equals("Añadir contacto")) {
+                System.out.println("Has escogido: " + opcion);
+            }
+            else if (opcion.equals("Mostrar contactos")) {
+                System.out.println("Has escogido: " + opcion);
+            }
+            else if (opcion.equals("Buscar contacto")) {
+                System.out.println("Has escogido: " + opcion);
+            }
+            else if (opcion.equals("Salir")) {
+                System.out.println("Saliendo del programa...");
+                salir = true; // detenemos el bucle
+            }
+            else {
+                System.out.println("Opción no válida. Intenta de nuevo.");
+            }
         }
 
-        scanner.close();
+        scanner.close(); // se cierra al final
     }
 }
