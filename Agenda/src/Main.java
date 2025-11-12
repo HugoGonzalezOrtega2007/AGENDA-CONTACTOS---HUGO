@@ -16,7 +16,7 @@ public class Main {
 
             System.out.print("Opción: ");
 
-            String opcion = scanner.nextLine(); // leer y limpiar entrada
+            String opcion = scanner.nextLine();
 
             if (opcion.equals("Añadir contacto")) {
                 System.out.println("Has escogido: " + opcion);
@@ -29,13 +29,13 @@ public class Main {
             }
             else if (opcion.equals("Salir")) {
                 System.out.println("Saliendo del programa...");
-                salir = true; // detenemos el bucle
+                salir = true;
             }
             else {
                 System.out.println("Opción no válida. Intenta de nuevo.");
             }
         }
 
-        scanner.close(); // se cierra al final
+        scanner.close();
     }
 }
